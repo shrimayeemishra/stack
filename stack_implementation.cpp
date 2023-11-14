@@ -1,3 +1,6 @@
+//Code to implement stack and it's functions using class
+//No stl used
+
 #include<iostream>
 using namespace std;
 
