@@ -1,3 +1,5 @@
+//Code to reverse a stack
+
 #include<iostream>
 #include<stack>
 using namespace std;
@@ -5,16 +7,20 @@ using namespace std;
 
 void insert_at_bottom(stack<int> &st, int data)
 {
+    //If stack is empty, we'll push the data to be inserted at bottom and return back
     if(st.empty())
     {
         st.push(data);
         return;
     }
-
+    //Store the top element
     int temp = st.top();
+    //Pop from stack
     st.pop();
+    //Recursive function
     insert_at_bottom(st, data);
 
+    //Push back the temp element which was earlier popped
     st.push(temp);
 }
 
@@ -28,7 +34,9 @@ void reverse_stack(stack<int> &st)
 
     int temp = st.top();
     st.pop();
+    //Recursive call
     reverse_stack(st);
+    //Since we want to reverse, we'll insert item from bottom
     insert_at_bottom(st, temp);
 }
 
