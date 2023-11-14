@@ -1,3 +1,5 @@
+//Code to print out the middle element of our stack
+
 #include<iostream>
 #include<stack>
 using namespace std;
