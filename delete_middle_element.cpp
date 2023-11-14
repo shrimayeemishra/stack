@@ -1,3 +1,4 @@
+//Code to delete the middle element of a stack
 #include<iostream>
 #include<stack>
 using namespace std;
